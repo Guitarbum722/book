@@ -207,7 +207,7 @@ calling an associated function on it. If we didn’t `use std::io`, we could
 have written this line as `std::io::stdin()`.
 
 This particular function returns a handle to the standard input for your
-terminal. More specifically, a [std::io::Stdin][iostdin].
+terminal. More specifically, a [`std::io::Stdin`][iostdin].
 
 [iostdin]: ../../std/io/struct.Stdin.html
 
@@ -258,7 +258,7 @@ done:
     io::stdin().read_line(&mut guess).expect("Failed to read line");
 ```
 
-But that gets hard to read. So we’ve split it up, two lines for two method
+But that gets hard to read. So we’ve split it up into two lines for two method
 calls. We already talked about `read_line()`, but what about `expect()`? Well,
 we already mentioned that `read_line()` puts what the user types into the `&mut
 String` we pass it. But it also returns a value: in this case, an
